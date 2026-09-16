@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrish Beauty Parlour | National Nagar, Jalna</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --accent-color: #ffb703;
+            --dark-color: #2b2b2b;
+            --light-color: #fdfcdc;
+            --bg-pink: #fff0f3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark-color);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #b5838d;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b5838d;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: #b5838d;
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(181, 131, 141, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #6d597a;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 8%;
+            background-color: var(--bg-pink);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #6d597a;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: #8c8c8c;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: #b5838d;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Contact / Location Section */
+        .contact {
+            padding: 80px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            color: #6d597a;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: #b5838d;
+            font-size: 20px;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2b2b2b;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; 
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .contact {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa-solid fa-spa"></i> Abrish Beauty Parlour</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Enhance Your Natural Beauty</h1>
+        <p>Welcome to Abrish Beauty Parlour – Professional bridal makeup, skincare, and hair styling services in National Nagar, Jalna.</p>
+        <a href="#contact" class="btn">Book an Appointment</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Premium Services</h2>
+        <p class="section-subtitle">Tailored treatments to make you look and feel your absolute best</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Bridal Makeup</h3>
+                <p>Exquisite bridal makeup looks customized for your special day with long-lasting finish.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-face-smile"></i>
+                <h3>Skin Care & Facials</h3>
+                <p>Rejuvenating facials and skin prep treatments tailored to give your face a glowing radiance.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-scissors"></i>
+                <h3>Hair Styling & Treatments</h3>
+                <p>Trendy haircuts, styling, smoothing, and professional hair care packages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h2>Visit Our Parlour</h2>
+            <p><i class="fa-solid fa-location-dot"></i> National Nagar, Jalna, Maharashtra</p>
+            <p><i class="fa-solid fa-phone"></i> +91 9175299186</p>
+            <p><i class="fa-solid fa-clock"></i> Open Mon - Sun: 10:00 AM - 8:00 PM</p>
+            <a href="tel:9175299186" class="btn" style="display:inline-block; margin-top:15px;">Call Now</a>
+        </div>
+        <div class="map-box">
+            <!-- Jalna Map Location Embedded -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.8!2d75.88!3d19.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA4JzAwLjAiTiA3NcKwNTMnMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Abrish Beauty Parlour, National Nagar, Jalna. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
